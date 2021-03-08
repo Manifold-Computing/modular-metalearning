@@ -789,8 +789,8 @@ class BounceGrad(object):
       ax[i//3, i%3].set_ylim([
         np.floor(np.min(self.T.MTRAIN[self.perm_sample_fns[i]].UValOutput))-.5,
         np.ceil( np.max(self.T.MTRAIN[self.perm_sample_fns[i]].UValOutput))+.5])
-      ax[i//3, i%3].set_xticks(np.array([-1,0,1]))
-      ax[i//3, i%3].set_yticks(np.array([-1,0,1]))
+      ax[i//3, i%3].set_xticks(np.array([-1, 0, 1]))
+      ax[i//3, i%3].set_yticks(np.array([-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]))
     plt.savefig(os.path.join(self.plot_name, 'comparisons'))
     if self.store_video:
       plt.savefig(os.path.join(self.plot_name,
